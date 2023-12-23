@@ -1,0 +1,24 @@
+@use "../util/" as u;
+@use "../globals/" as g;
+
+.section{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+   justify-content: space-around;
+   max-width: 102.4rem;
+& > .form__container{
+margin: auto;
+}
+
+> h2 {
+    background-color: g.$clr-primary-dark;
+    color: var(--clr-light);
+    max-width: fit-content;
+    margin-left: auto;
+    margin-top: 2rem;
+    padding: 1rem 3rem;
+    clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+
+}
+}

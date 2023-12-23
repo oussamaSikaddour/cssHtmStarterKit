@@ -1,0 +1,23 @@
+@use "../util/" as u;
+@use "../globals/" as g;
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 0 3rem 0 3rem;
+ color: var(--clr-light);
+  height: 6rem;
+  background-color: g.$clr-primary-dark;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 3;
+  >p{
+    margin-left: auto;
+  }
+  .logo{
+   width: 5rem;
+   height: 5rem;
+   object-fit: contain;
+  }
+}

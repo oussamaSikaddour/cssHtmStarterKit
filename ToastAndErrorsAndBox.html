@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>OussSika</title>
+
+    <link rel="icon" type="image/icon" href="img/logo.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+
+    <header class="header">
+      <nav class="nav" aria-labelledby="main-nav">
+        <h2 id="main-nav" class="sr-only">
+            Main navigation
+        </h2>
+        <ol class="nav__items">
+          <li class="nav__item">
+              <a class="nav__link" href="index.html" aria-current="page">
+               Home
+              </a>
+          </li>
+      </ol>
+    </nav>
+  </header>
+  
+  
+  <button id="showPhoneNav-btn" class="button nav__humb" aria-expanded="false" aria-controls="options" aria-label="Show phone navigation" aria-labelledby="showPhoneNav-btn">
+      <span></span>
+      <span></span>
+    </button>
+  <!-- Nav Phone -->
+   <nav class="nav--phone" aria-labelledby="main-nav-phone">
+  
+    <h2 id="main-nav-phone" class="sr-only">
+      main navigation for phone
+    </h2>
+  
+      <ul class="nav__items" id="options" hidden>
+        <li class="nav__item">
+          <a class="nav__link" href="index.html" aria-current="page">Home</a>
+        </li>
+
+      </ul>
+  </nav> 
+
+
+<main class="container">
+  <button class="button  errors__opener">
+    open errors
+  </button>
+
+
+  <button class="button  toast__opener">
+    open toast
+  </button>
+
+
+  <button class="button  box__opener">
+    open box
+  </button>
+</main>
+
+
+
+<div  
+role="dialog"   
+aria-labelledby="errors_label"
+class="errors__container" 
+ id="defaultModal" >
+ <h2 id="errors_label " class="sr-only" >errors</h2>
+    <div class="errors__closer">
+      <span ><i class="fa-solid fa-xmark"></i></span>
+    </div>
+     <ul class="errors">
+       <li class="error">. username already used ffffffffffffff  ffffffffffffff</li>
+       <li class="error">. username already used ffffffffffffff  ffffffffffffff</li>
+       <li class="error">. username already used ffffffffffffff  ffffffffffffff</li>
+       <li class="error">. username already used ffffffffffffff  ffffffffffffff</li>
+       <li class="error">. username already used ffffffffffffff  ffffffffffffff</li>
+       <li class="error">. username already used ffffffffffffff  ffffffffffffff</li>
+       <li class="error">. username already used ffffffffffffff  ffffffffffffff</li>
+       <li class="error">. username already used ffffffffffffff  ffffffffffffff</li>
+       <li class="error">. username already used ffffffffffffff  ffffffffffffff</li>
+       <li class="error">. username already used ffffffffffffff  ffffffffffffff</li>
+       <li class="error">. username already used ffffffffffffff  ffffffffffffff</li>
+       <li class="error">. username already used ffffffffffffff  ffffffffffffff</li>
+       <li class="error">. username already used ffffffffffffff  ffffffffffffff</li>
+       <li class="error">. username already used ffffffffffffff  ffffffffffffff</li>
+       <li class="error">. username already used ffffffffffffff  ffffffffffffff</li>
+       <li class="error">. username already used ffffffffffffff  ffffffffffffff</li>
+       <li class="error">. username already used ffffffffffffff  ffffffffffffff</li>
+       <li class="error">. username already used ffffffffffffff  ffffffffffffff</li>
+
+    </ul>
+</div>
+
+
+
+
+
+
+<div  
+role="dialog"   
+aria-labelledby="toast_label"
+class="toast__container" 
+ id="defaultModal" >
+ <h2 id="toast_label" class="sr-only" >toast</h2>
+ <div class="toast">you have scceeded ddddddddd   dddd     ggg</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div role="dialog"  aria-labelledby="dialog_box" class="box" id="box" >
+  <h3 id="dialog_box" class="sr-only">help about the box</h3>
+    <div class="box__header">
+      <h3 >example of an action that i asked to confirme if i want to do it ?</h3>
+    </div>
+    <div class="box__body">
+      the name and some details about of the actions that i want to confime
+    </div>
+   <div class="box__footer">
+    <button class="button box__closer">Non</button>
+    <button class="button button--primary">Oui</button>
+   </div>
+</div>
+    <script src="main.js"></script>
+  </body>
+</html>

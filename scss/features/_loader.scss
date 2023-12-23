@@ -1,0 +1,55 @@
+@use "../util/" as u;
+@use "../globals/" as g;
+
+.loader {
+  &__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+      to bottom right,
+      g.$clr-primary,
+      g.$clr-primary-light,
+      g.$clr-primary-dark
+    );
+    -webkit-backdrop-filter: blur(1rem);
+    backdrop-filter: blur(1rem);
+    z-index: 1000;
+    opacity: 1;
+    transition: all 0.5s;
+    &.hide {
+      z-index: -1000;
+      opacity: 0;
+    }
+  }
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  animation: loading 10s linear infinite;
+  margin: auto;
+
+  &__circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: g.$clr-primary;
+    border-radius: 50%;
+
+    animation: animateLoadingCircle 3s linear infinite;
+    &:nth-child(2) {
+      background: g.$clr-warning;
+      animation-delay: -1.5s;
+    }
+  }
+  &.l {
+    width: 7rem;
+    height: 7rem;
+  }
+}

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>OussSika</title>
+
+    <link rel="icon" type="image/icon" href="img/logo.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+
+
+    <header class="header">
+      <nav class="nav" aria-labelledby="main-nav">
+        <h2 id="main-nav" class="sr-only">
+            Main navigation
+        </h2>
+        <ol class="nav__items">
+          <li class="nav__item">
+              <a class="nav__link" href="index.html" aria-current="page">
+               Home
+              </a>
+          </li>
+      </ol>
+    </nav>
+  </header>
+  
+  
+  <button id="showPhoneNav-btn" class="button nav__humb" aria-expanded="false" aria-controls="options" aria-label="Show phone navigation" aria-labelledby="showPhoneNav-btn">
+      <span></span>
+      <span></span>
+    </button>
+  <!-- Nav Phone -->
+   <nav class="nav--phone" aria-labelledby="main-nav-phone">
+  
+    <h2 id="main-nav-phone" class="sr-only">
+      main navigation for phone
+    </h2>
+  
+      <ul class="nav__items" id="options" hidden>
+        <li class="nav__item">
+          <a class="nav__link" href="index.html" aria-current="page">Home</a>
+        </li>
+
+      </ul>
+  </nav> 
+
+  <main class="container">
+    <button class="button button--primary modal__opener">
+      open Modal
+      <i class="fa-sharp fa-solid fa-users"></i>
+    </button>
+  </main>
+    <div 
+    role="dialog"   
+    aria-labelledby="dialog_label"
+     class="modal" 
+     id="defaultModal" 
+
+     >
+      <div class="modal__content">
+        <div class="modal__header">
+          <h2 id="dialog_label"  class="sr-only">info modal</h2>
+          <h2 >Modal Title</h2>
+          <div class="modal__closer">
+            <span ><i class="fa-solid fa-xmark"></i></span>
+          </div>
+        
+        </div>
+
+        <div class="modal__body">
+          <div class="form__container">
+            <form class="form " method="POST">
+               <div><H2>form</H2></div>
+              <div>
+                <div class="input__item">
+                  <div class="input__group">
+                  <input
+                    type="text"
+                    class="input"
+                    placeholder="Lieu D'obtention"
+                    name="placeOfGraduation"
+                    id="placeOfGraduation"
+                    required
+                  />
+                  <label for="placeOfGraduation" class="input__label">Lieu d'obtention</label>
+                 </div>
+                  <div class="input__error">
+                    error msg
+                  </div>
+                </div>
+                <div class="input__item">
+                  <div class="input__group">
+                  <input
+                    type="text"
+                    class="input"
+                    placeholder="input test"
+                    name="inputTest"
+                    id="inputTest"
+                    required
+                  />
+                  <label for="inputTest" class="input__label">Input Test</label>
+                 </div>
+                  <div class="input__error">
+                    error msg
+                  </div>
+                </div>
+        
+              
+              </div>
+          
+              <div>
+                <div class="checkbox__group">
+                <div class="choices">
+                <input type="checkbox" id="fruit1" name="fruit-1" value="Apple" />
+                <label for="fruit1">Apple</label>
+                <input type="checkbox" id="fruit2" name="fruit-2" value="orange" />
+                <label for="fruit2">Orange</label>
+                <input type="checkbox" id="fruit3" name="fruit-3" value="banana" />
+                <label for="fruit3">banana</label>
+                </div>
+                <div class="input__error">
+                  error msg
+                </div>
+                </div>
+        
+          
+              </div>
+        
+         
+                <div class="radio__group">
+                <div class="choices">
+                <input type="radio" id="choice1" name="radio" value="choice 1" />
+                <label for="choice1">choice 1</label>
+                <input type="radio" id="choice2" name="radio" value="choice 2" />
+                <label for="choice2">choice 2</label>
+                <input type="radio" id="choice3" name="radio" value="choice 3" />
+                <label for="choice3">choice 3</label>
+                <input type="radio" id="choice4" name="radio" value="choice 4" />
+                <label for="choice4">choice 4</label>
+                <input type="radio" id="choice5" name="radio" value="choice 5" />
+                <label for="choice5">choice 5</label>
+                <input type="radio" id="choice6" name="radio" value="choice 6" />
+                <label for="choice6">choice 6</label>
+                <input type="radio" id="choice7" name="radio" value="choice 7" />
+                <label for="choice7">choice 7</label>
+                <input type="radio" id="choice8" name="radio" value="choice 8" />
+                <label for="choice8">choice 8</label>
+        
+                </div>
+                <div class="input__error">
+                  error msg
+                </div>
+              </div>
+              <div>
+              <div class="select__group">
+                <div>
+                  <label for="selectOne">Désir transferrer vers la commune:</label> 
+                  <div class="select" >
+                    
+                    <select id="selectOne">
+                      <option value="Option 1">
+                        --choirir la daira --
+                      </option>
+                      <option value="Option 2">tlemcen</option>
+                      <option value="Option 3">chetwan</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input__error">
+                  error msg
+                </div>
+                </div>
+              <div class="select__group">
+                <div>
+                  <label for="selectTwo">Désir transferrer vers la commune:</label> 
+                  <div class="select">
+                    <select id="selectTwo">
+                      <option value="Option 1">
+                        --choirir la daira --
+                      </option>
+                      <option value="Option 2">tlemcen</option>
+                      <option value="Option 3">chetwan</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input__error">
+                  error msg
+                </div>
+                </div>
+          
+        
+        
+               
+              </div>
+              <div>
+                <div class="imgs__container">
+                  <h2>Liste des documents a fournir</h2>
+                <div class="imgs">
+                  <img  class="img" src="img/boat.webp" alt="aqquitement">
+                  <img  class="img" src="img/boat.webp" alt="aqquitement">
+                  <img  class="img" src="img/boat.webp" alt="aqquitement">
+                  <img  class="img" src="img/boat.webp" alt="aqquitement">
+                  <img  class="img" src="img/boat.webp" alt="aqquitement">
+                  <img  class="img" src="img/boat.webp" alt="aqquitement">
+                  <img  class="img" src="img/boat.webp" alt="aqquitement">
+                  <img  class="img" src="img/boat.webp" alt="aqquitement">
+                  <img  class="img" src="img/boat.webp" alt="aqquitement">
+                  <img  class="img" src="img/boat.webp" alt="aqquitement">
+                </div>
+                </div>
+              </div>
+             
+         <div>
+          <div class="textarea__group">
+            <textarea
+              class="textarea"
+              id="observations"
+              name="observations"
+              rows="4"
+              cols="100"
+              maxlength="200"
+              placeholder="Enter your message here"
+            >
+            </textarea>
+            <label for="observations" class="textarea__label">Observations </label>
+            <div class="input__error">
+              error msg
+            </div>
+          </div>
+         </div>
+        
+        
+        <div>
+        <div class="upload__group">
+            <button class="button">Modifier les justificatifs</button>
+            <input type="file" name="myfile" />
+          </div>
+        </div>
+              <div class="form__actions">
+                <button class="button button--primary" type="submit">
+                  Valider
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

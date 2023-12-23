@@ -1,0 +1,101 @@
+@use "../util/" as u;
+@use "../globals/" as g;
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  left: 0;
+  top: 0;
+  min-height: 100vh;
+  min-width: 100vw; /* Full height */
+  background-color: transparent;
+  backdrop-filter: blur(1rem);
+  animation: fadeInd 0.3s ease-in;
+  justify-content: center;
+  align-items: center;
+  &.open{
+    display: flex;
+  }
+  &__content {
+    font-family: var(--ff);
+    position: fixed;
+    background-color: var(--clr-light);
+    display: flex;
+    flex-direction: column;
+    min-width: 27rem;
+    max-width: 98vw;
+    height: fit-content;
+    max-height: 95vh;
+    animation: slideInCentre 0.5s ease-in-out;
+    backdrop-filter: blur(1rem);
+    border-radius: 1rem;
+    box-shadow: var(--div-shadow);
+  }
+  &__header {
+    padding: 0.2rem 1.6rem;
+    display: flex;
+    width: 100%;
+    height: 8rem;
+    justify-content: space-between;
+    align-items: center;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom: 0.2rem solid g.$clr-bg;
+    & h2 {
+        flex: 1;
+      color: var(--clr-font);
+      text-align: center;
+    }
+  }
+&__closer{
+  background-color: var(--clr-bg-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+ > span{
+  color :var(--clr-font);
+  font-size: 2.5rem;
+  cursor: pointer;
+ font-weight: 400;
+}
+&:hover{
+  background-color: var(--clr-bg);
+}
+}
+  &__body {
+    position: relative;
+    padding: 1rem;
+    height: calc(100% - 8rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+    border-bottom-left-radius: var(--br);
+    .form__container{
+      border: none;
+      overflow-y: auto;
+      scrollbar-gutter: stable;
+      margin-bottom: 6rem;
+    }
+    .form__actions{
+      height: 6rem;
+      border-top:0.2rem solid var(--clr-bg);
+      position: absolute;
+      bottom: 0;
+      background-color: white;
+      z-index: 1;
+    
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    // object-fit: contain;
+  }
+}

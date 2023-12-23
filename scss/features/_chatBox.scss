@@ -1,0 +1,176 @@
+@use "../util/" as u;
+@use "../globals/" as g;
+
+
+
+.chatBox {
+  position: fixed;
+  bottom: 3rem;
+  right:0.5rem;
+  width: 27rem;
+  background-color: var(--clr-light);
+  border: 0.2rem solid g.$clr-bg-dark;
+  border-radius: 1rem;
+  z-index: 4;
+  box-shadow: var(--div-shadow);
+  transform: translateX(200%);
+  transition: transform 0.5s ease-in-out;
+  @include u.breakpoint(md) {
+   right: 1.5rem;
+  }
+  &__header {
+    padding: 1rem;
+    background-color: g.$clr-primary;
+    border-top-right-radius: var(--br);
+    border-top-left-radius: var(--br);
+    border-bottom: 0.2rem solid g.$clr-primary-dark;
+    width: 100%;
+    color: var(--clr-light);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h3{
+      color:var(--clr-light);
+    }
+  }
+
+  &__opener {
+    position:fixed;
+    z-index: 1;
+    bottom: 5rem;
+    right: 2rem;
+    transform: translateX(0);
+    transition: all 0.3s ease-in-out;
+    overflow: unset;
+    span {
+      font-size: 1rem;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: -1.5rem;
+      right: 60%;
+      padding: 0 0.5rem;
+      border-radius: 40rem;
+      height: 2.5rem;
+
+      background-color: g.$clr-danger;
+    }
+  }
+  &__closer {
+    width: 3rem;
+    height: 3rem;
+    font-size: 3rem;
+    line-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover{
+      background-color: g.$clr-primary-dark;
+    }
+  }
+  
+
+  &__form {
+    flex:1;
+    padding: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    textarea {
+      flex: 1;
+      display: inline-block;
+      margin-left: auto;
+      padding: 0.5rem;
+      outline: none;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: var(--fs);
+      background-color: var(--clr-bg);
+    }
+    &__button {
+      text-decoration: none;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      font-size: var(--fs);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+  &__footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 0.2rem solid g.$clr-bg-dark;
+  }
+&.show{
+transform: translateX(0);
+}
+}
+.message {
+
+  &s {
+    display: flex;
+    flex-direction: column;
+    max-height:30rem ;
+    overflow-y: auto;
+  }
+  position: relative;
+  background-color: g.$clr-primary;
+  color: var(--clr-light);
+  width: fit-content;
+  align-self: flex-end;
+  padding: 1rem;
+  margin-right: 2rem;
+  border-radius: 1rem;
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  font-size:var(--fs);
+ &--reccieved{
+
+  align-self: flex-start;
+  margin-right: unset;
+  margin-left: 2rem;
+  background-color: g.$clr-bg;
+  color: var(--clr-font);
+  .message__date{
+    color: rgba(g.$clr-font,0.5);
+    left: unset;
+    right: 1rem;
+  }
+  &.message::before {
+    background-color: g.$clr-bg;
+    left:-1rem;
+  }
+ }
+  p {
+    max-width:27ch;
+  };
+  &__date {
+    font-size:var(--fs);
+    color: rgba(g.$clr-primary, 0.9);
+    position: absolute;
+    bottom: -2.5rem;
+    left: 1rem;
+  }
+  &::before {
+    content: "";
+    background-color: g.$clr-primary;
+    position: absolute;
+    top: 2rem;
+    right: -1rem;
+    width: 3rem;
+    height: 3rem;
+    transform: rotate(45deg);
+  }
+
+
+}

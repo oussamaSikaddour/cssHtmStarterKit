@@ -1,0 +1,30 @@
+@use "../util/" as u;
+@use "variables" as v;
+h1 {
+  font-size: 3rem;
+  color: v.$clr-font;
+  text-transform: uppercase;
+  // @include u.gradient-text(red,blue);
+  @include u.breakpoint(sm) {
+    font-size: 2.5rem;
+  }
+}
+h2 {
+  font-size: 2.5rem;
+  color: v.$clr-font;
+  text-align: center;
+  @include u.breakpoint(sm) {
+    font-size: 2rem;
+  }
+}
+h3 {
+  font-size: 2rem;
+  color: v.$clr-font;
+  @include u.breakpoint(sm) {
+    font-size: 1.8rem;
+  }
+}
+
+p{
+  font-size: var(--fs);
+}

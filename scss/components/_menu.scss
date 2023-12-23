@@ -1,0 +1,92 @@
+@use "../util/" as u;
+@use "../globals/" as g;
+
+.menu {
+  position: absolute;
+  top: 5.6rem;
+  left: 0;
+  width: 27rem;
+  background-color: var(--clr-light);
+  z-index: 6;
+  height: calc(100vh - 5.6rem);
+  border: 0.2rem solid var(--clr-bg);
+  border-left: 0;
+  border-bottom-right-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+  transform: translateX(-110%);
+  transition: transform 0.5s ease-in-out;
+  box-shadow: var(--div-shadow);
+
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0.2rem solid var(--clr-bg);
+  }
+  &__item {
+    color:var(--clr-font);
+    display: flex;
+    height: 5rem;
+    justify-content: space-between;
+    padding: 0 1rem;
+    align-items: center;
+    font-size: var(--fs);
+    cursor: pointer;
+    &:hover {
+      background-color: var(--clr-bg);
+    }
+    & a {
+      text-decoration: none;
+      color:var(--clr-font);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+  }
+  &.open {
+    transform: translateX(0);
+  }
+
+
+
+&__btn--phone {
+  position: fixed;
+  display: flex;
+  top: 1rem;
+  left: 1rem;
+  width: 4rem;
+  height: 4rem;
+  outline:transparent;
+  border-radius: 50%;
+  z-index:8; 
+  margin-left: 1rem;
+  background-color: var(--clr-light);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--div-shadow);
+  @include u.breakpoint(md) {
+    display: none;
+  }
+  & span {
+    color:var(--clr-font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    transform-origin: center;
+    transform: rotate(0);
+    transition:transform 0.6s ease-in-out;
+    font-size: 2.5rem;
+
+  }
+&.clicked{
+> span{
+  transform: rotate(360deg);
+}
+}
+}
+}

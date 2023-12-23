@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>OussSika</title>
+
+    <link rel="icon" type="image/icon" href="img/logo.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+    <header class="header">
+    <nav class="nav" aria-labelledby="main-nav">
+      <h2 id="main-nav" class="sr-only">
+          Main navigation
+      </h2>
+
+     <div class="nav__addons">
+
+        <button id="mainMenubutton" class="button rounded menu__btn" aria-haspopup="true" aria-controls="menu">
+            <i class="fa-solid fa-gear"></i>
+        </button>
+        <a class="nav__logo" href="/"  tabindex="0" role="link" aria-label="Description of the overall image">
+            <img src="./img/logo.ico" alt="app Logo">
+        </a>
+
+     </div>
+
+    
+    <ol class="nav__items">
+        <li class="nav__item active">
+            <a class="nav__link" href="/">
+                <span aria-hidden="true"><i class="fa-solid fa-house"></i></span>
+                <span class="sr-only">Home</span>
+            </a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="accordion.html" aria-current="page">
+               Accordion
+            </a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="table.html" aria-current="page">
+            Table
+            </a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" href="fromsSlider.html" aria-current="page">
+            form with Steps
+            </a>
+        </li>
+
+    </ol>
+      <ol class="nav__items">
+          <li class="nav__item">
+              <div id="notification-btn" class="nav__btn nav__btn--dropdown" aria-expanded="false" aria-controls="subItems" aria-label="Show notifications" aria-labelledby="notification-btn">
+                  Notifications <i class="fa-solid fa-bell" aria-hidden="true"></i>
+                  <span class="nav__item__badge">5000</span>
+              </div>
+              <ul id="subItems" class="nav__items--sub" hidden>
+                <li>
+                    <a href="#">Notification 1</a>
+                </li>
+                <li>
+                    <a href="#">Notification 2</a>
+                </li>
+                <li>
+                    <a href="#">Notification 3</a>
+                </li>
+       
+                </li>
+              </ul>
+          </li>
+          <li class="nav__item nav__item--dropDown">
+              <div id="subNav-btn" class="nav__btn nav__btn--dropdown " aria-expanded="false" aria-controls="subItems" aria-label="Show user menu" aria-labelledby="subNav-btn">
+                 user name <img src="./img/default.png" alt="profile Picture">
+              </div>
+              <ul id="subItems" class="nav__items--sub" hidden>
+                <li>
+                    <a href="#"> <span aria-hidden="true"><i class="fa-solid fa-house"></i></span> Submenu Item 1</a>
+                </li>
+                <li>
+                    <a href="#">Submenu Item 2</a>
+                </li>
+                <li>
+                    <a href="#">Submenu Item 2</a>
+                </li>
+                <li>
+                    <a href="#">Submenu Item 2</a>
+                </li>
+                <li>
+                    <a href="#">Submenu Item 1</a>
+                </li>
+                <li>
+                    <a href="#">Submenu Item 2</a>
+                </li>
+                <li>
+                    <a href="#">Submenu Item 2</a>
+                </li>
+                <li>
+                    <a href="#">Submenu Item 2</a>
+                </li>
+                <li>
+                    <a href="#">Submenu Item 2</a>
+                </li>
+                <li>
+                    <a href="#">Submenu Item 2</a>
+                </li>
+              </ul>
+          </li>
+      </ol>
+      
+  </nav>
+</header>
+
+<!-- Nav Men Button  -->
+
+<button id="mainMenuPhonebutton" class="button menu__btn menu__btn--phone" aria-haspopup="true" aria-controls="menu">
+    <span>
+        <i class="fa-solid fa-gear"></i>
+    </span>
+</button>
+
+
+
+<div class="menu">
+<ul id="menu" role="menu" aria-labelledby="menubutton" class="menu__items">
+    <li role="presentation" class="menu__item">
+      <a role="menuitem" href="#">Description</a>
+    </li>
+    <li role="presentation" class="menu__item">
+      <a role="menuitem" href="#">Description</a>
+    </li>
+    <li role="presentation" class="menu__item">
+      <a role="menuitem" href="#">Description</a>
+    </li>
+  </ul>
+</div>
+
+
+
+
+<!--                       --------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------                            Nav Phone--------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
+ -->
+
+<button id="showPhoneNav-btn" class="button nav__humb" aria-expanded="false" aria-controls="options" aria-label="Show phone navigation" aria-labelledby="showPhoneNav-btn">
+    <span></span>
+    <span></span>
+  </button>
+<!-- Nav Phone -->
+ <nav class="nav--phone" aria-labelledby="main-nav-phone">
+
+  <h2 id="main-nav-phone" class="sr-only">
+    main navigation for phone
+  </h2>
+
+    <ul class="nav__items" id="options" hidden>
+      <li class="nav__item">
+        <a class="nav__link" href="/" aria-current="page">home</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#">page 2</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#">page 3</a>
+      </li>
+
+      <li class="nav__item nav__item--dropDown">
+        <div class="nav__btn nav__btn--dropdown">
+          <i class="fa-solid fa-bell" aria-hidden="true"></i>
+          <span class="nav__item__badge">5000</span>
+        </div>
+        <ul id="subItems" class="nav__items--sub" hidden>
+            <li>
+                <a href="#">Notification 1</a>
+            </li>
+            <li>
+                <a href="#">Notification 2</a>
+            </li>
+        </ul>
+      </li>
+      <li class="nav__item nav__item--dropDown">
+        <div id="subNav-btn-phone" class="nav__btn nav__btn--dropdown" aria-expanded="false" aria-controls="subItems" aria-label="Show user menu" aria-labelledby="subNav-btn-phone">
+            User Menu <img src="./img/default.png" alt="profile Picture">
+        </div>
+        <ul id="subItems" class="nav__items--sub" hidden>
+            <li>
+                <a href="#">Submenu Item 1</a>
+            </li>
+            <li>
+                <a href="#">Submenu Item 2</a>
+            </li>
+            <li>
+                <a href="#">Submenu Item 2</a>
+            </li>
+            <li>
+                <a href="#">Submenu Item 2</a>
+            </li>
+            <li>
+                <a href="#">Submenu Item 1</a>
+            </li>
+            <li>
+                <a href="#">Submenu Item 2</a>
+            </li>
+            <li>
+                <a href="#">Submenu Item 2</a>
+            </li>
+            <li>
+                <a href="#">Submenu Item 2</a>
+            </li>
+        </ul>
+    </li>
+
+    </ul>
+</nav> 
+
+<!-- breadcrumb -->
+
+    <script src="main.js"></script>
+  </body>
+</html>

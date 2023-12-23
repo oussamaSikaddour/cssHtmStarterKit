@@ -1,0 +1,11 @@
+@use "../util/" as u;
+@use "../globals/" as g;
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+  outline: transparent;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}

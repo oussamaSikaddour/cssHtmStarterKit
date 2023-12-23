@@ -1,0 +1,37 @@
+@use "../util/" as u;
+@use "../globals/" as g;
+
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+.img{
+ &s{
+  overflow-x:auto;
+  max-width: fit-content;
+  display: flex;
+  padding: 1rem;
+ justify-content: flex-start;
+ gap:2rem;
+ &__container{
+  width: 100%;
+  overflow: hidden;
+  flex-direction: column;
+ }
+ }
+  max-width: 15rem;
+  max-height: 20rem;
+  object-fit: contain;
+  border: 0.3rem solid g.$clr-bg;
+ transform: scale(1);
+  border-radius: var(--br);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  &:hover{
+    transform: scale(1.05);
+  }
+}

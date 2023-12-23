@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>OussSika</title>
+
+    <link rel="icon" type="image/icon" href="img/logo.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+
+    <header class="header">
+      <nav class="nav" aria-labelledby="main-nav">
+        <h2 id="main-nav" class="sr-only">
+            Main navigation
+        </h2>
+        <ol class="nav__items">
+          <li class="nav__item">
+              <a class="nav__link" href="index.html" aria-current="page">
+               Home
+              </a>
+          </li>
+      </ol>
+    </nav>
+  </header>
+  
+  
+  <button id="showPhoneNav-btn" class="button nav__humb" aria-expanded="false" aria-controls="options" aria-label="Show phone navigation" aria-labelledby="showPhoneNav-btn">
+      <span></span>
+      <span></span>
+    </button>
+  <!-- Nav Phone -->
+   <nav class="nav--phone" aria-labelledby="main-nav-phone">
+  
+    <h2 id="main-nav-phone" class="sr-only">
+      main navigation for phone
+    </h2>
+  
+      <ul class="nav__items" id="options" hidden>
+        <li class="nav__item">
+          <a class="nav__link" href="index.html" aria-current="page">Home</a>
+        </li>
+
+      </ul>
+  </nav> 
+  <div 
+
+  id="chatBox"
+  aria-hidden="true"
+  class="chatBox" >
+    <h2 id="main-nav" class="sr-only">
+      Chat Box
+     </h2>
+    <div class="chatBox__header"> 
+    <span 
+    id="closeChatBoxBtn"
+    class="chatBox__closer"
+    aria-haspopup="true" 
+    aria-controls="chatBox"
+    aria-expanded="true"
+    aria-label="hide Chat Box" 
+    aria-labelledby="closeChatBoxBtn"
+
+
+    
+    >&times;</span>  
+    <h3> Receiver </h3> 
+  
+  </div>
+  <div class="messages">
+  <div class="message">
+    <p>
+    Votre demande de logement social a été examinée par une commission d’attribution.
+    Le refus de la commission peut être motivé par différentes raisons.
+    La demande a pu être déclarée irrecevable car vous ne remplissez pas les conditions fixées par la loi pour accéder à une habitation à loyer modéré. Il y en a deux :
+    être de nationalité française ou admis·e à séjourner régulièrement en France ;
+    avoir des revenus qui ne dépassent pas les plafonds de ressources réglementaires fixés pour l’attribution d’un logement social.
+  </p>
+    <span class="message__date">2023-06-23</span>
+  </div>
+  <div class="message message--reccieved">
+    <p>
+      Votre demande de logement social a été examinée par une commission d’attribution.
+  
+    Le refus de la commission peut être motivé par différentes raisons.
+    
+    </p>
+    <span class="message__date">2023-12-12</span>
+  </div>
+    
+  </div>
+  <div class="chatBox__footer"> 
+    <form class="chatBox__form">
+      <textarea id="multilineInput" rows="1"></textarea>
+
+      <button class="chatBox__form__button">
+        <span><i class="far fa-paper-plane"></i></span>
+      </button>
+    </form>
+    </div>
+  </div>
+  <button 
+  id="openChatBoxBtn"
+  class="button button--primary rounded chatBox__opener"
+  aria-haspopup="true" 
+  aria-controls="chatBox"
+  aria-expanded="false"
+  aria-label="Show Chat Box" 
+  aria-labelledby="openChatBoxBtn"
+  >
+<i class="far fa-comments"></i><span>666</span>
+</button>
+
+    <script src="main.js"></script>
+  </body>
+</html>

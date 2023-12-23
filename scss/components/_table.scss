@@ -1,0 +1,135 @@
+@use "../util/" as u;
+@use "../globals/" as g;
+.table {
+  &__container {
+    position: relative;
+    margin-top: 2rem;
+    height: fit-content;
+    display: flex;
+    max-height: 90vh;
+    justify-content: start;
+    flex-direction: column;
+    overflow: auto;
+  }
+  &__header {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 0.6rem;
+    border-top-right-radius: 0.6rem;
+    background-color: var(--clr-light);
+    border: 0.2rem solid var(--clr-bg);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    min-height: 40vh;
+    overflow-y: auto;
+    & > div {
+      width: 100%;
+      display: flex;
+      gap: 2rem;
+      flex-direction: column;
+      @include u.breakpoint(md) {
+        flex-direction: row;
+      }
+    &:not([class]){
+      justify-content: space-between;
+    }
+    }
+
+  }
+  &__filters{
+  flex-wrap: wrap;
+   justify-content: space-around;
+  }
+  &__footer{
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    background-color: var(--clr-light);
+     border:0.2rem solid var(--clr-bg);
+     border-bottom-left-radius: var(--br);
+     border-bottom-right-radius: var(--br);
+    min-height: 5rem;
+    padding: 1rem;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+table {
+  border-collapse: collapse;
+
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+
+
+  & tr {
+    background-color: var(--clr-light);
+    cursor: pointer;
+    &:last-of-type {
+      td:last-of-type {
+        border-bottom-right-radius: 0.6rem;
+      }
+    }
+
+    & th:first-child {
+      position: sticky;
+      left: 0;
+      text-align: center;
+      z-index: 1;
+    }
+
+    & td:first-child {
+      background-color: g.$clr-bg-light;
+      position: sticky;
+      left: 0;
+      text-align: center;
+      z-index: 1;
+    }
+    &:nth-child(even) {
+      background-color: g.$clr-bg-light;
+      backdrop-filter: blur(1rem);
+    }
+    &:hover {
+      background-color: g.$clr-bg;
+    }
+  }
+
+  & th,
+  & td {
+    color: var(--clr-font);
+    font-size: var(--fs);
+    text-align: left;
+    height: 5rem;
+    border: 0.2rem solid var(--clr-bg);
+    text-wrap: nowrap;
+  }
+  & td {
+    font-size: var(--fs);
+    transition: color 0.3s ease-in-out;
+    padding: 0.5rem 1rem;
+  }
+  & th {
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    background-color: g.$clr-bg-light;
+    &> div{
+      padding: 0.5rem 1rem;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+  }
+}
