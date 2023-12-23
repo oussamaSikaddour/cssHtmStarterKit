@@ -1,17 +1,14 @@
 @use "../util/" as u;
 @use "../globals/" as g;
 .socials {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   background-color: g.$clr-primary;
   max-width: fit-content;
   border-radius: 40rem;
-
-  @include u.breakpoint(lg) {
-    display: flex;
-  }
+  
   & > li {
      width: 4.5rem;
      height: 4.5rem;
