@@ -1,2 +1,1 @@
-# cssHtmStarterKit
- This HTML and CSS starter kit is a versatile toolbox containing essential elements like forms, tables, navigation menus, tabs, and more. It's designed to kickstart various projects by providing a ready-to-use foundation for web development
+This HTML and CSS starter kit is a versatile toolbox that includes essential web elements such as forms, tables, navigation menus, tabs, and more. Thoughtfully crafted, it not only jumpstarts projects but also upholds accessibility standards, ensuring that the developed websites are usable and navigable for all users, including those with diverse needs
