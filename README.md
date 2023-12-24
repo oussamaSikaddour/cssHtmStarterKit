@@ -1,1 +1,0 @@
-This HTML and CSS starter kit is a versatile toolbox that includes essential web elements such as forms, tables, navigation menus, tabs, and more. Thoughtfully crafted, it not only jumpstarts projects but also upholds accessibility standards, ensuring that the developed websites are usable and navigable for all users, including those with diverse needs

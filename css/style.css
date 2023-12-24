@@ -119,6 +119,109 @@ p {
   font-size: var(--fs);
 }
 
+html.arabic {
+  transition: all 0.3s ease-in-out;
+  direction: rtl;
+}
+html.arabic .input__label {
+  left: unset;
+  right: 1rem;
+}
+html.arabic .input__error {
+  text-align: right;
+}
+html.arabic .input__span {
+  right: unset;
+  left: 0;
+}
+html.arabic .textarea__label {
+  left: unset;
+  right: 1rem;
+}
+html.arabic .forms {
+  direction: ltr;
+}
+html.arabic .form__container {
+  direction: rtl;
+}
+html.arabic .tab__panels {
+  direction: ltr;
+}
+html.arabic .table__container {
+  direction: ltr;
+}
+html.arabic .table__container > div {
+  direction: rtl;
+}
+html.arabic table {
+  direction: rtl;
+}
+html.arabic table thead {
+  left: unset;
+  right: 0;
+}
+html.arabic table tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: unset;
+  border-bottom-left-radius: 0.6rem;
+}
+html.arabic table tr th:first-child {
+  left: unset;
+  right: 0;
+}
+html.arabic table tr td:first-child {
+  left: unset;
+  right: 0;
+}
+html.arabic table th, html.arabic table td {
+  text-align: right;
+}
+html.arabic .nav__items:nth-of-type(1) {
+  margin-right: unset;
+  margin-left: auto;
+}
+html.arabic .nav__items--sub {
+  right: unset;
+  left: 0;
+}
+html.arabic .menu {
+  left: unset;
+  right: 0;
+  border-right: 0;
+  border-bottom-left-radius: 0.6rem;
+  border-top-left-radius: 0.6rem;
+  transform: translateX(110%);
+}
+html.arabic .menu.open {
+  transform: translateX(0);
+}
+html.arabic .footer > p {
+  margin-left: unset;
+  margin-right: auto;
+}
+
+.message {
+  align-self: flex-start;
+  margin-right: unset;
+  margin-left: 2rem;
+}
+.message--reccieved {
+  align-self: flex-end;
+  margin-right: 2rem;
+  margin-left: unset;
+}
+.message--reccieved.message::before {
+  left: 1rem;
+  right: unset;
+}
+.message__date {
+  left: 1rem;
+  right: unset;
+}
+.message::before {
+  right: unset;
+  left: 1rem;
+}
+
 /* Add Animation */
 @keyframes slideInCentre {
   0% {
@@ -735,7 +838,7 @@ svg {
 }
 
 .socials {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
@@ -743,11 +846,6 @@ svg {
   max-width: -moz-fit-content;
   max-width: fit-content;
   border-radius: 40rem;
-}
-@media (min-width: 62em) {
-  .socials {
-    display: flex;
-  }
 }
 .socials > li {
   width: 4.5rem;
@@ -1261,6 +1359,11 @@ input[type=radio]:checked:disabled + label:before {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.table__body {
+  position: relative;
+  max-height: 40vh;
+  overflow-y: auto;
+}
 .table__footer {
   position: sticky;
   display: flex;
@@ -1278,10 +1381,15 @@ input[type=radio]:checked:disabled + label:before {
 }
 
 table {
-  border-collapse: collapse;
   margin: 0 auto;
   padding: 0;
   width: 100%;
+}
+table thead {
+  z-index: 2;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 table tr {
   background-color: var(--clr-light);
@@ -1316,7 +1424,6 @@ table th, table td {
   font-size: var(--fs);
   text-align: left;
   height: 5rem;
-  border: 0.2rem solid var(--clr-bg);
   text-wrap: nowrap;
 }
 table td {
@@ -1763,7 +1870,7 @@ table th > div {
   background-color: var(--clr-light);
   border: 0.2rem solid #DADCE0;
   min-width: 27rem;
-  max-width: 50rem;
+  max-width: 100rem;
   height: -moz-fit-content;
   height: fit-content;
   flex-direction: column;
@@ -1854,7 +1961,8 @@ table th > div {
   position: fixed;
   bottom: 3rem;
   right: 0.5rem;
-  width: 27rem;
+  min-width: 27rem;
+  max-width: 40rem;
   background-color: var(--clr-light);
   border: 0.2rem solid #70757A;
   border-radius: 1rem;
@@ -1979,6 +2087,7 @@ table th > div {
   display: flex;
   flex-direction: column;
   max-height: 30rem;
+  padding: 0.5rem;
   overflow-y: auto;
 }
 .message--reccieved {
@@ -1998,12 +2107,14 @@ table th > div {
   left: -1rem;
 }
 .message p {
-  max-width: 27ch;
+  min-width: 27ch;
 }
 .message__date {
   font-size: var(--fs);
   color: rgba(27, 154, 158, 0.9);
   position: absolute;
+  width: -moz-fit-content;
+  width: fit-content;
   bottom: -2.5rem;
   left: 1rem;
 }
@@ -2012,6 +2123,8 @@ table th > div {
   background-color: #1B9A9E;
   position: absolute;
   top: 2rem;
+  z-index: -1;
+  left: unset;
   right: -1rem;
   width: 3rem;
   height: 3rem;

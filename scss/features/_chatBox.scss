@@ -7,7 +7,8 @@
   position: fixed;
   bottom: 3rem;
   right:0.5rem;
-  width: 27rem;
+  min-width: 27rem;
+  max-width: 40rem;
   background-color: var(--clr-light);
   border: 0.2rem solid g.$clr-bg-dark;
   border-radius: 1rem;
@@ -120,6 +121,7 @@ transform: translateX(0);
     display: flex;
     flex-direction: column;
     max-height:30rem ;
+    padding: 0.5rem;
     overflow-y: auto;
   }
   position: relative;
@@ -152,12 +154,13 @@ transform: translateX(0);
   }
  }
   p {
-    max-width:27ch;
+    min-width:27ch;
   };
   &__date {
     font-size:var(--fs);
     color: rgba(g.$clr-primary, 0.9);
     position: absolute;
+    width: fit-content;
     bottom: -2.5rem;
     left: 1rem;
   }
@@ -166,6 +169,8 @@ transform: translateX(0);
     background-color: g.$clr-primary;
     position: absolute;
     top: 2rem;
+    z-index: -1;
+    left: unset;
     right: -1rem;
     width: 3rem;
     height: 3rem;

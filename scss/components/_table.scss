@@ -47,6 +47,12 @@
   flex-wrap: wrap;
    justify-content: space-around;
   }
+
+  &__body{
+    position: relative;
+    max-height: 40vh;
+    overflow-y: auto;
+  }
   &__footer{
     position: sticky;
     display: flex;
@@ -65,12 +71,15 @@
 }
 
 table {
-  border-collapse: collapse;
-
   margin: 0 auto;
   padding: 0;
   width: 100%;
-
+  thead{
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
 
   & tr {
     background-color: var(--clr-light);
@@ -110,7 +119,6 @@ table {
     font-size: var(--fs);
     text-align: left;
     height: 5rem;
-    border: 0.2rem solid var(--clr-bg);
     text-wrap: nowrap;
   }
   & td {

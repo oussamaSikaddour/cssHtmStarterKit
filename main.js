@@ -1,4 +1,4 @@
-
+const savedLanguage = localStorage.getItem('language') || 'Fr';
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////                                                                                  custom accordion
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -58,7 +58,6 @@ toggleAccordion(0);
 
 const tabTriggers = document.querySelectorAll('.tab__trigger');
 const tabPanels = document.querySelectorAll('.tab__panel');
-
 const updateTabHeaderStates = () => {
   tabTriggers.forEach((t, i) => {
     const isActive = t.classList.contains("active");
@@ -336,8 +335,20 @@ const initialLanguages = [
   { lang: 'Ar', flag: './img/ar.png' },
 ];
 
+
 const langMenu = document.querySelector(".lang__menu");
 const langBtn = document.querySelector(".lang__btn");
+
+
+function setLanguagePreference(language) {
+  localStorage.setItem('language', language);
+  if (language === 'Ar') {
+    document.documentElement.classList.add('arabic');
+  } else {
+    document.documentElement.classList.remove('arabic');
+  }
+}
+
 
 const getIndexByLang = (languageCode) => initialLanguages.findIndex((language) => language.lang === languageCode);
 const toggleMenu = () => {
@@ -347,6 +358,8 @@ const toggleMenu = () => {
 };
 
 const populateLangMenu = (selectedLang) => {
+
+  setLanguagePreference(selectedLang);
   const index = getIndexByLang(selectedLang);
 
   langBtn.innerHTML = `
@@ -369,9 +382,9 @@ const populateLangMenu = (selectedLang) => {
 };
 
 if (langBtn){
-populateLangMenu('Fr');
+populateLangMenu(savedLanguage);
 } // Initial population with 'Fr' language
-
+setLanguagePreference(savedLanguage);
 const handleLangBtnClick = () => toggleMenu();
 
 const handleLangMenuItemClick = (event) => {
