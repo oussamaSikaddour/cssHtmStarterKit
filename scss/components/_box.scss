@@ -7,12 +7,10 @@
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 20; /* Sit on top */
-    margin: auto;
     background-color: var(--clr-light);
     border:0.2rem solid g.$clr-bg;
     min-width: 27rem;
-    max-width: 100rem;
-    height: fit-content;
+    width: 95vw;
     flex-direction: column;
     top:50%;
     left:50%;
@@ -20,6 +18,9 @@
     animation: slideCenterForAbsolute 0.5s ease-in-out;
     border-radius: 1rem;
     box-shadow: var(--div-shadow);
+    @include u.breakpoint(md) {
+        width: unset;
+      }
     &.open{
       display: flex;
     }
