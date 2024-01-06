@@ -25,8 +25,8 @@
             Main navigation
         </h2>
         <ol class="nav__items">
-          <li class="nav__item">
-              <a class="nav__link" href="index.html" aria-current="page">
+         <li class="nav__item" role="none">
+              <a class="nav__link" href="index.html" aria-current="page" tabindex="0" role="menuitem">
                Home
               </a>
           </li>
@@ -47,8 +47,8 @@
     </h2>
   
       <ul class="nav__items" id="options" hidden>
-        <li class="nav__item">
-          <a class="nav__link" href="index.html" aria-current="page">Home</a>
+       <li class="nav__item" role="none">
+          <a class="nav__link" href="index.html" aria-current="page" tabindex="0" role="menuitem">Home</a>
         </li>
 
       </ul>
@@ -58,7 +58,7 @@
     <main class="container">
       <div class="accordion">
         <div class="accordion__panel">
-          <h2 id="panel1-heading" class="accordion__header">
+          <h2 id="panel1-heading" class="accordion__header" tabindex="0" role="button">
             <span class="accordion__title" id="panel1-title">Boating</span>
             <div class="accordion__trigger"
               aria-controls="panel1-content"
@@ -100,7 +100,7 @@
    
     
         <div class="accordion__panel">
-          <h2 id="panel2-heading" class="accordion__header">
+          <h2 id="panel2-heading" class="accordion__header" tabindex="0" role="button">
             <span class="accordion__title" id="panel2-title">shipping</span>
             <div class=" accordion__trigger"
               aria-controls="panel2-content"
@@ -190,6 +190,10 @@
       </div>
     </main>
 
-    <script src="main.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/nav.js" defer></script>
+    <script src="js/accordion.js" defer></script>
+    <script src="js/langMenu.js" defer></script>
+
   </body>
 </html>

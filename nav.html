@@ -22,97 +22,112 @@
           Main navigation
       </h2>
 
-     <div class="nav__addons">
+     <div class="nav__addons"  role="menubar">
 
-        <button id="mainMenubutton" class="button rounded menu__btn" aria-haspopup="true" aria-controls="menu">
+        <button 
+        id="mainMenubutton" 
+        class="button rounded menu__btn"
+        aria-haspopup="true"
+        aria-expanded="false"
+         aria-controls="mainMenu" 
+        >
             <i class="fa-solid fa-gear"></i>
         </button>
-        <a class="nav__logo" href="index.html"  tabindex="0" role="link" aria-label="Description of the overall image">
+        <a class="nav__logo" href="index.html"  tabindex="0" role="menuitem" aria-label="Description of the overall image" >
             <img src="./img/logo.ico" alt="app Logo">
         </a>
 
      </div>
 
     
-    <ol class="nav__items">
-        <li class="nav__item active">
-            <a class="nav__link" href="index.html">
+    <ol class="nav__items" role="menubar">
+        <li class="nav__item active" role="none">
+            <a class="nav__link" href="index.html" tabindex="0" role="menuitem">
                 <span aria-hidden="true"><i class="fa-solid fa-house"></i></span>
                 <span class="sr-only">Home</span>
             </a>
         </li>
-        <li class="nav__item">
-            <a class="nav__link" href="accordion.html" aria-current="page">
+       <li class="nav__item" role="none">
+            <a class="nav__link" href="accordion.html" aria-current="page" tabindex="0" role="menuitem">
                Accordion
             </a>
         </li>
-        <li class="nav__item">
-            <a class="nav__link" href="table.html" aria-current="page">
+       <li class="nav__item" role="none">
+            <a class="nav__link" href="table.html" aria-current="page" tabindex="0" role="menuitem">
             Table
             </a>
         </li>
-        <li class="nav__item">
-            <a class="nav__link" href="fromsSlider.html" aria-current="page">
+       <li class="nav__item"  role="none">
+            <a class="nav__link" href="fromsSlider.html" aria-current="page" tabindex="0" role="menuitem">
             form with Steps
             </a>
         </li>
 
     </ol>
-      <ol class="nav__items">
-          <li class="nav__item">
-              <div id="notification-btn" class="nav__btn nav__btn--dropdown" aria-expanded="false" aria-controls="subItems" aria-label="Show notifications" aria-labelledby="notification-btn">
+      <ol class="nav__items" role="menubar">
+         <li class="nav__item" role="none">
+              <div 
+              tabindex="0"
+              id="notification-btn" 
+              class="nav__btn nav__btn--dropdown"
+              role="menuitem"
+              aria-haspopup="true"
+               aria-expanded="false" 
+               aria-controls="subItems" 
+               aria-label="Show notifications" 
+               aria-labelledby="notification-btn">
                   Notifications <i class="fa-solid fa-bell" aria-hidden="true"></i>
                   <span class="nav__item__badge">5000</span>
               </div>
-              <ul id="subItems" class="nav__items--sub" hidden>
-                <li>
-                    <a href="#">Notification 1</a>
+              <ul role="menu" id="subItems" class="nav__items--sub" hidden>
+                <li role="none">
+                    <a href="#" tabindex="0" role="menuitem">Notification 1</a>
                 </li>
-                <li>
-                    <a href="#">Notification 2</a>
+                <li role="none">
+                    <a href="#"  tabindex="0" role="menuitem">Notification 2</a>
                 </li>
-                <li>
-                    <a href="#">Notification 3</a>
+                <li role="none">
+                    <a href="#" tabindex="0"  role="menuitem" >Notification 3</a>
                 </li>
        
-                </li>
+              
               </ul>
           </li>
-          <li class="nav__item nav__item--dropDown">
-              <div id="subNav-btn" class="nav__btn nav__btn--dropdown " aria-expanded="false" aria-controls="subItems" aria-label="Show user menu" aria-labelledby="subNav-btn">
+          <li class="nav__item nav__item--dropDown" role="none">
+              <div id="subNav-btn" 
+               tabindex="0"
+              class="nav__btn nav__btn--dropdown "
+              role="menuitem"
+              aria-haspopup="true"
+               aria-expanded="false"
+                aria-controls="subItems" 
+                aria-label="Show user menu" 
+                aria-labelledby="subNav-btn">
                  user name <img src="./img/default.png" alt="profile Picture">
               </div>
-              <ul id="subItems" class="nav__items--sub" hidden>
-                <li>
-                    <a href="#"> <span aria-hidden="true"><i class="fa-solid fa-house"></i></span> Submenu Item 1</a>
+              <ul id="subItems" class="nav__items--sub"  role="menu" hidden>
+                <li role="none">
+                    <a href="#" tabindex="0" role="menuitem"> <span aria-hidden="true"><i class="fa-solid fa-house"></i></span> Submenu Item 1</a>
                 </li>
-                <li>
-                    <a href="#">Submenu Item 2</a>
+                <li role="none">
+                    <a href="#" tabindex="0" role="menuitem"> <span aria-hidden="true"><i class="fa-solid fa-house"></i></span> Submenu Item 1</a>
                 </li>
-                <li>
-                    <a href="#">Submenu Item 2</a>
+                <li role="none">
+                    <a href="#" tabindex="0" role="menuitem"> <span aria-hidden="true"><i class="fa-solid fa-house"></i></span> Submenu Item 1</a>
                 </li>
-                <li>
-                    <a href="#">Submenu Item 2</a>
+                <li role="none">
+                    <a href="#" tabindex="0" role="menuitem"> <span aria-hidden="true"><i class="fa-solid fa-house"></i></span> Submenu Item 1</a>
                 </li>
-                <li>
-                    <a href="#">Submenu Item 1</a>
+                <li role="none">
+                    <a href="#" tabindex="0" role="menuitem"> <span aria-hidden="true"><i class="fa-solid fa-house"></i></span> Submenu Item 1</a>
                 </li>
-                <li>
-                    <a href="#">Submenu Item 2</a>
+                <li role="none">
+                    <a href="#" tabindex="0" role="menuitem"> <span aria-hidden="true"><i class="fa-solid fa-house"></i></span> Submenu Item 1</a>
                 </li>
-                <li>
-                    <a href="#">Submenu Item 2</a>
+                <li role="none">
+                    <a href="#" tabindex="0" role="menuitem"> <span aria-hidden="true"><i class="fa-solid fa-house"></i></span> Submenu Item 1</a>
                 </li>
-                <li>
-                    <a href="#">Submenu Item 2</a>
-                </li>
-                <li>
-                    <a href="#">Submenu Item 2</a>
-                </li>
-                <li>
-                    <a href="#">Submenu Item 2</a>
-                </li>
+          
               </ul>
           </li>
       </ol>
@@ -122,7 +137,12 @@
 
 <!-- Nav Men Button  -->
 
-<button id="mainMenuPhonebutton" class="button menu__btn menu__btn--phone" aria-haspopup="true" aria-controls="menu">
+<button 
+id="mainMenuPhonebutton" 
+class="button menu__btn menu__btn--phone" 
+aria-haspopup="true" 
+aria-expanded="false"
+aria-controls="mainMenu">
     <span>
         <i class="fa-solid fa-gear"></i>
     </span>
@@ -131,15 +151,15 @@
 
 
 <div class="menu">
-<ul id="menu" role="menu" aria-labelledby="menubutton" class="menu__items">
+<ul id="mainMenu" role="menu" aria-labelledby="menubutton" class="menu__items">
     <li role="presentation" class="menu__item">
-      <a role="menuitem" href="#">Description</a>
+      <a role="menuitem" href="#" tabindex="0">Description</a>
     </li>
     <li role="presentation" class="menu__item">
-      <a role="menuitem" href="#">Description</a>
+      <a role="menuitem" href="#" tabindex="0">Description</a>
     </li>
     <li role="presentation" class="menu__item">
-      <a role="menuitem" href="#">Description</a>
+      <a role="menuitem" href="#" tabindex="0">Description</a>
     </li>
   </ul>
 </div>
@@ -152,7 +172,9 @@
 -------------------------------------------------------------------------------------------------------------------------
  -->
 
-<button id="showPhoneNav-btn" class="button nav__humb" aria-expanded="false" aria-controls="navPhone" aria-label="Show phone navigation" aria-labelledby="showPhoneNav-btn">
+<button id="showPhoneNav-btn" 
+class="button nav__humb" 
+aria-expanded="false" aria-controls="navPhone" aria-label="Show phone navigation" aria-labelledby="showPhoneNav-btn">
     <span></span>
     <span></span>
   </button>
@@ -163,60 +185,76 @@
     main navigation for phone
   </h2>
 
-    <ul class="nav__items" id="navPhone" hidden>
-      <li class="nav__item">
-        <a class="nav__link" href="index.html" aria-current="page">home</a>
+    <ul class="nav__items" id="navPhone" hidden role="menubar">
+     <li class="nav__item" role="none">
+        <a class="nav__link" href="index.html" tabindex="0" role="menuitem">home</a>
       </li>
-      <li class="nav__item">
-        <a class="nav__link" href="#">page 2</a>
+     <li class="nav__item" role="none">
+        <a class="nav__link" href="#" tabindex="0" role="menuitem">page 2</a>
       </li>
-      <li class="nav__item">
-        <a class="nav__link" href="#">page 3</a>
+     <li class="nav__item" role="none">
+        <a class="nav__link" href="#" tabindex="0" role="menuitem">page 3</a>
       </li>
 
-      <li class="nav__item nav__item--dropDown">
-        <div class="nav__btn nav__btn--dropdown">
-          <i class="fa-solid fa-bell" aria-hidden="true"></i>
+      <li class="nav__item nav__item--dropDown" role="none">
+        <div class="nav__btn nav__btn--dropdown" 
+        tabindex="0"
+        role="menuitem"
+        aria-haspopup="true"
+        aria-expanded="false"
+        >
+          <i class="fa-solid fa-bell" ></i>
           <span class="nav__item__badge">5000</span>
         </div>
-        <ul id="subItems" class="nav__items--sub" hidden>
-            <li>
-                <a href="#">Notification 1</a>
+        <ul id="subItems" class="nav__items--sub" hidden role="menu">
+            <li role="none">
+                <a href="#" tabindex="0" role="menuitem">Notification 1</a>
             </li>
-            <li>
-                <a href="#">Notification 2</a>
+            <li role="none">
+                <a href="#" tabindex="0" role="menuitem">Notification 2</a>
             </li>
         </ul>
       </li>
-      <li class="nav__item nav__item--dropDown">
-        <div id="subNav-btn-phone" class="nav__btn nav__btn--dropdown" aria-expanded="false" aria-controls="subItems" aria-label="Show user menu" aria-labelledby="subNav-btn-phone">
-            User Menu <img src="./img/default.png" alt="profile Picture">
+      <li class="nav__item nav__item--dropDown" role="none">
+        <div 
+         id="subNav-btn-phone" 
+        class="nav__btn nav__btn--dropdown"
+        role="menuitem"
+         aria-haspopup="true"
+         aria-expanded="false" 
+         aria-controls="subItems" 
+         aria-label="Show user menu" 
+         aria-labelledby="subNav-btn-phone"
+         tabindex="0"
+         >
+            User Menu <img src="./img/default.png" alt="profile Picture" role="img">
         </div>
-        <ul id="subItems" class="nav__items--sub" hidden>
-            <li>
-                <a href="#">Submenu Item 1</a>
+        <ul id="subItems" class="nav__items--sub" hidden role="menu">
+            <li role="none">
+                <a href="#" tabindex="0" role="menuitem">Submenu Item 1</a>
             </li>
-            <li>
-                <a href="#">Submenu Item 2</a>
+            <li role="none">
+                <a href="#"tabindex="0" role="menuitem">Submenu Item 2</a>
             </li>
-            <li>
-                <a href="#">Submenu Item 2</a>
+            <li role="none">
+                <a href="#" tabindex="0" role="menuitem">Submenu Item 2</a>
             </li>
-            <li>
-                <a href="#">Submenu Item 2</a>
+            <li role="none">
+                <a href="#" tabindex="0" role="menuitem">Submenu Item 2</a>
             </li>
-            <li>
-                <a href="#">Submenu Item 1</a>
+            <li role="none">
+                <a href="#" tabindex="0" role="menuitem">Submenu Item 2</a>
             </li>
-            <li>
-                <a href="#">Submenu Item 2</a>
+            <li role="none">
+                <a href="#" tabindex="0" role="menuitem">Submenu Item 2</a>
             </li>
-            <li>
-                <a href="#">Submenu Item 2</a>
+            <li role="none">
+                <a href="#" tabindex="0" role="menuitem">Submenu Item 2</a>
             </li>
-            <li>
-                <a href="#">Submenu Item 2</a>
+            <li role="none">
+                <a href="#" tabindex="0" role="menuitem">Submenu Item 2</a>
             </li>
+
         </ul>
     </li>
 
@@ -224,7 +262,10 @@
 </nav> 
 
 <!-- breadcrumb -->
+<script src="js/common.js"></script>
+<script src="js/nav.js" defer></script>
+<script src="js/mainMenu.js" defer></script>
+<script src="js/langMenu.js" defer></script>
 
-    <script src="main.js"></script>
   </body>
 </html>

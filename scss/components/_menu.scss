@@ -28,7 +28,6 @@
     display: flex;
     height: 5rem;
     justify-content: space-between;
-    padding: 0 1rem;
     align-items: center;
     font-size: var(--fs);
     cursor: pointer;
@@ -36,13 +35,18 @@
       background-color: var(--clr-bg);
     }
     & a {
+      padding: 0 1rem;
       text-decoration: none;
       color:var(--clr-font);
       height: 100%;
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
       cursor: pointer;
+      &:focus{
+        border: 0.3rem solid black;
+      }
     }
   }
   &.open {

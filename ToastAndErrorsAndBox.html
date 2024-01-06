@@ -25,8 +25,8 @@
             Main navigation
         </h2>
         <ol class="nav__items">
-          <li class="nav__item">
-              <a class="nav__link" href="index.html" aria-current="page">
+         <li class="nav__item" role="none">
+              <a class="nav__link" href="index.html" aria-current="page" tabindex="0" role="menuitem">
                Home
               </a>
           </li>
@@ -47,15 +47,15 @@
     </h2>
   
       <ul class="nav__items" id="options" hidden>
-        <li class="nav__item">
-          <a class="nav__link" href="index.html" aria-current="page">Home</a>
+       <li class="nav__item" role="none">
+          <a class="nav__link" href="index.html" aria-current="page" tabindex="0" role="menuitem">Home</a>
         </li>
 
       </ul>
   </nav> 
 
 
-<main class="container">
+<main class="container" role="alert" >
   <button class="button  errors__opener">
     open errors
   </button>
@@ -74,15 +74,17 @@
 
 
 <div  
-role="dialog"   
+role="alert"   
 aria-labelledby="errors_label"
 class="errors__container" 
  id="defaultModal" >
  <h2 id="errors_label " class="sr-only" >errors</h2>
-    <div class="errors__closer">
+    <button 
+    class="errors__closer" 
+    >
       <span ><i class="fa-solid fa-xmark"></i></span>
-    </div>
-     <ul class="errors">
+    </button>
+     <ul class="errors" tabindex="0">
        <li class="error">. username already used ffffffffffffff  ffffffffffffff</li>
        <li class="error">. username already used ffffffffffffff  ffffffffffffff</li>
        <li class="error">. username already used ffffffffffffff  ffffffffffffff</li>
@@ -111,8 +113,9 @@ class="errors__container"
 
 
 <div  
-role="dialog"   
+role="alert"   
 aria-labelledby="toast_label"
+tabindex="0"
 class="toast__container" 
  id="defaultModal" >
  <h2 id="toast_label" class="sr-only" >toast</h2>
@@ -142,6 +145,11 @@ class="toast__container"
     <button class="button button--primary">Oui</button>
    </div>
 </div>
-    <script src="main.js"></script>
-  </body>
+<script src="js/common.js"></script>
+<script src="js/nav.js" defer></script>
+<script src="js/alers.js" defer></script>
+<script src="js/toast.js" defer></script>
+<script src="js/dialogBox.js" defer></script>
+<script src="js/langMenu.js" defer></script>
+</body>
 </html>

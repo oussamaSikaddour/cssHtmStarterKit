@@ -24,8 +24,8 @@
             Main navigation
         </h2>
         <ol class="nav__items">
-          <li class="nav__item">
-              <a class="nav__link" href="index.html" aria-current="page">
+         <li class="nav__item" role="none">
+              <a class="nav__link" href="index.html" aria-current="page" tabindex="0" role="menuitem">
                Home
               </a>
           </li>
@@ -46,47 +46,54 @@
     </h2>
   
       <ul class="nav__items" id="options" hidden>
-        <li class="nav__item">
-          <a class="nav__link" href="index.html" aria-current="page">Home</a>
+       <li class="nav__item" role="none">
+          <a class="nav__link" href="index.html" aria-current="page" tabindex="0" role="menuitem">Home</a>
         </li>
 
       </ul>
   </nav> 
  <main class="container">
+
+
+
+
+
+
+
   <div class="tabs__container">
     <div 
     role="tablist" aria-label="tabs"
     class="tab__triggers">
-     <button class="tab__trigger"     
+     <div class="tab__trigger"     
      role="tab"
      aria-selected="false"
      aria-controls="panel-1"
      id="tab-1"
      tabindex="-1"
-     >forms</button>
-     <button 
+     >forms</div>
+     <div 
      role="tab"
      aria-selected="false"
      aria-controls="panel-2"
      id="tab-2"
      tabindex="-1"
-     class="tab__trigger">title super long</button>
-     <button 
+     class="tab__trigger">title super long long long long long</div>
+     <div 
      role="tab"
      aria-selected="false"
      aria-controls="panel-3"
      id="tab-3"
      tabindex="-1"
-     class="tab__trigger">tables</button>
+     class="tab__trigger">tables</div>
     </div>
 <div class="tab__panels">
-<div class="tab__panel" id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1" hidden>
+<div class="tab__panel" id="panel-1" role="tabpanel" tabindex="-1" aria-labelledby="tab-1" hidden>
 <p>panel 1</p>
 </div>
-<div class="tab__panel" id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
+<div class="tab__panel" id="panel-2" role="tabpanel" tabindex="-1" aria-labelledby="tab-2" hidden>
   <p>panel 2 </p>
 </div>
-<div class="tab__panel" id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" hidden>
+<div class="tab__panel" id="panel-3" role="tabpanel" tabindex="-1" aria-labelledby="tab-3" hidden>
 <p>pannel 3</p>
 </div>
 </div>
@@ -94,6 +101,9 @@
  </main>
 
 
-    <script src="main.js"></script>
+ <script src="js/common.js"></script>
+ <script src="js/nav.js" defer></script>
+ <script src="js/tabs.js" defer></script>
+ <script src="js/langMenu.js" defer></script>
   </body>
 </html>

@@ -20,6 +20,11 @@
   box-shadow: 0rem 0.5rem 0.5rem -0.3rem rgba(0,0,0,0.75);
   align-items: center;
   background-color: var(--clr-light);
+  &__logo{
+    &:focus{
+      border: 0.2rem solid g.$clr-primary-dark;
+    }
+  }
   &__addons{
     height: 100%;
     display: flex;
@@ -92,6 +97,9 @@
           color:var(--clr-font);
           justify-content: space-around;
           align-items: center;
+          &:focus{
+            border: 0.2rem solid black;
+          }
         }
       }
     }
@@ -148,6 +156,9 @@
     &.active {
       background-color: g.$clr-bg;
     }
+    &:focus{
+     border: 0.2rem solid black;
+    }
   }
 
 
@@ -181,7 +192,7 @@
 
   }
   &:focus{
-    border-color: g.$clr-bg;
+   border: 0.2rem solid black;
   }
   &.clicked {
 

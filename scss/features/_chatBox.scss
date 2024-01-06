@@ -7,8 +7,7 @@
   position: fixed;
   bottom: 3rem;
   right:0.5rem;
-  min-width: 27rem;
-  max-width: 40rem;
+  max-width: 27rem;
   background-color: var(--clr-light);
   border: 0.2rem solid g.$clr-bg-dark;
   border-radius: 1rem;
@@ -18,6 +17,7 @@
   transition: transform 0.5s ease-in-out;
   @include u.breakpoint(md) {
    right: 1.5rem;
+   max-width: 40rem;
   }
   &__header {
     padding: 1rem;
@@ -136,8 +136,11 @@ transform: translateX(0);
   margin-top: 1rem;
   margin-bottom: 3rem;
   font-size:var(--fs);
+  max-width: 22rem;
+  @include u.breakpoint(md) {
+  max-width: unset;
+   }
  &--reccieved{
-
   align-self: flex-start;
   margin-right: unset;
   margin-left: 2rem;
@@ -154,7 +157,7 @@ transform: translateX(0);
   }
  }
   p {
-    min-width:27ch;
+    min-width:26ch;
   };
   &__date {
     font-size:var(--fs);

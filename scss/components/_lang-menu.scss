@@ -7,6 +7,13 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+
+    &__btn{
+        &:focus{
+          border-width: 0.4rem;
+          border-color: g.$clr-primary;
+        }
+    }
     img{
         height: 2.5rem;
         width: 3.2rem;

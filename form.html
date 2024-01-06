@@ -15,6 +15,7 @@
 
     <link rel="icon" type="image/icon" href="img/logo.ico" />
     <link rel="stylesheet" href="css/style.css" />
+ 
   </head>
   <body>
 
@@ -24,8 +25,8 @@
             Main navigation
         </h2>
         <ol class="nav__items">
-          <li class="nav__item">
-              <a class="nav__link" href="index.html" aria-current="page">
+         <li class="nav__item" role="none">
+              <a class="nav__link" href="index.html" aria-current="page" tabindex="0" role="menuitem">
                Home
               </a>
           </li>
@@ -46,8 +47,8 @@
     </h2>
   
       <ul class="nav__items" id="options" hidden>
-        <li class="nav__item">
-          <a class="nav__link" href="index.html" aria-current="page">Home</a>
+       <li class="nav__item" role="none">
+          <a class="nav__link" href="index.html" aria-current="page" tabindex="0" role="menuitem">Home</a>
         </li>
 
       </ul>
@@ -95,14 +96,17 @@
       </div>
   
       <div>
-        <div class="checkbox__group">
-        <div class="choices">
-        <input type="checkbox" id="fruit1" name="fruit-1" value="Apple" />
-        <label for="fruit1">Apple</label>
-        <input type="checkbox" id="fruit2" name="fruit-2" value="orange" />
-        <label for="fruit2">Orange</label>
-        <input type="checkbox" id="fruit3" name="fruit-3" value="banana" />
-        <label for="fruit3">banana</label>
+        <div class="checkbox__group" a>
+          <h2 id="checkbox-choices" class="sr-only">
+            list Des Choix
+        </h2>
+        <div class="choices" role="groupe"  aria-labelledby="checkbox-choices" >
+        <input type="checkbox" id="fruit1" name="fruit-1" value="Apple" role="checkbox"  aria-checked="false" />
+        <label for="fruit1"  tabindex="0"  >Apple</label>
+        <input type="checkbox" id="fruit2" name="fruit-2" value="orange" role="checkbox"  aria-checked="false"  />
+        <label for="fruit2"  tabindex="0" >Orange</label>
+        <input type="checkbox" id="fruit3" name="fruit-3" value="banana"  role="checkbox"  aria-checked="false"/>
+        <label for="fruit3"  tabindex="0"  >banana</label>
         </div>
         <div class="input__error">
           error msg
@@ -113,24 +117,27 @@
       </div>
 
  
-        <div class="radio__group">
-        <div class="choices">
-        <input type="radio" id="choice1" name="radio" value="choice 1" />
-        <label for="choice1">choice 1</label>
-        <input type="radio" id="choice2" name="radio" value="choice 2" />
-        <label for="choice2">choice 2</label>
+        <div class="radio__group" >
+          <h2 id="radioBtns-choices" class="sr-only">
+            list Des Choix
+        </h2>
+        <div class="choices" role="radiogroup" aria-labelledby="radioBtns-choices">
+        <input type="radio" id="choice1" name="radio" value="choice 1"  />
+        <label for="choice1" role="radio" tabindex="0" >choice 1</label>
+        <input type="radio" id="choice2" name="radio" value="choice 2"  />
+        <label for="choice2" role="radio" tabindex="0" >choice 2</label>
         <input type="radio" id="choice3" name="radio" value="choice 3" />
-        <label for="choice3">choice 3</label>
+        <label for="choice3" role="radio" tabindex="0">choice 3</label>
         <input type="radio" id="choice4" name="radio" value="choice 4" />
-        <label for="choice4">choice 4</label>
+        <label for="choice4" role="radio" tabindex="0">choice 4</label>
         <input type="radio" id="choice5" name="radio" value="choice 5" />
-        <label for="choice5">choice 5</label>
+        <label for="choice5" role="radio" tabindex="0">choice 5</label>
         <input type="radio" id="choice6" name="radio" value="choice 6" />
-        <label for="choice6">choice 6</label>
+        <label for="choice6" role="radio" tabindex="0">choice 6</label>
         <input type="radio" id="choice7" name="radio" value="choice 7" />
-        <label for="choice7">choice 7</label>
+        <label for="choice7" role="radio" tabindex="0">choice 7</label>
         <input type="radio" id="choice8" name="radio" value="choice 8" />
-        <label for="choice8">choice 8</label>
+        <label for="choice8" role="radio" tabindex="0">choice 8</label>
 
         </div>
         <div class="input__error">
@@ -141,14 +148,14 @@
       <div class="select__group">
         <div>
           <label for="selectOne">Désir transferrer vers la commune:</label> 
-          <div class="select" >
+          <div class="select"   role="combobox" >
             
-            <select id="selectOne">
-              <option value="Option 1">
+            <select id="selectOne" tabindex="0" >
+              <option value="Option 1" role="option"  role="listbox" tabindex="0">
                 --choirir la daira --
               </option>
-              <option value="Option 2">tlemcen</option>
-              <option value="Option 3">chetwan</option>
+              <option value="Option 2" role="option"  role="listbox" tabindex="0">tlemcen</option>
+              <option value="Option 3" role="option"  role="listbox" tabindex="0">chetwan</option>
             </select>
           </div>
         </div>
@@ -156,23 +163,24 @@
           error msg
         </div>
         </div>
-      <div class="select__group">
-        <div>
-          <label for="selectTwo">Désir transferrer vers la commune:</label> 
-          <div class="select">
-            <select id="selectTwo">
-              <option value="Option 1">
-                --choirir la daira --
-              </option>
-              <option value="Option 2">tlemcen</option>
-              <option value="Option 3">chetwan</option>
-            </select>
+        <div class="select__group">
+          <div>
+            <label for="selecttwo">Désir transferrer vers la commune:</label> 
+            <div class="select"   role="combobox" >
+              
+              <select id="selecttwo" tabindex="0" >
+                <option value="Option 1" role="option"  role="listbox" tabindex="0">
+                  --choirir la daira --
+                </option>
+                <option value="Option 2" role="option"  role="listbox" tabindex="0">tlemcen</option>
+                <option value="Option 3" role="option"  role="listbox" tabindex="0">chetwan</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <div class="input__error">
-          error msg
-        </div>
-        </div>
+          <div class="input__error">
+            error msg
+          </div>
+          </div>
   
 
 
@@ -182,16 +190,16 @@
         <div class="imgs__container">
           <h2>Liste des documents a fournir</h2>
         <div class="imgs">
-          <img  class="img" src="img/boat.webp" alt="aqquitement">
-          <img  class="img" src="img/boat.webp" alt="aqquitement">
-          <img  class="img" src="img/boat.webp" alt="aqquitement">
-          <img  class="img" src="img/boat.webp" alt="aqquitement">
-          <img  class="img" src="img/boat.webp" alt="aqquitement">
-          <img  class="img" src="img/boat.webp" alt="aqquitement">
-          <img  class="img" src="img/boat.webp" alt="aqquitement">
-          <img  class="img" src="img/boat.webp" alt="aqquitement">
-          <img  class="img" src="img/boat.webp" alt="aqquitement">
-          <img  class="img" src="img/boat.webp" alt="aqquitement">
+          <img  class="img" src="img/boat.webp" role="img" alt="aqquitement" tabindex="0" aria-label="aqquitement">
+          <img  class="img" src="img/boat.webp" role="img" alt="aqquitement" tabindex="0" aria-label="aqquitement">
+          <img  class="img" src="img/boat.webp" role="img" alt="aqquitement" tabindex="0" aria-label="aqquitement">
+          <img  class="img" src="img/boat.webp" role="img" alt="aqquitement" tabindex="0" aria-label="aqquitement">
+          <img  class="img" src="img/boat.webp" role="img" alt="aqquitement" tabindex="0" aria-label="aqquitement">
+          <img  class="img" src="img/boat.webp" role="img" alt="aqquitement" tabindex="0" aria-label="aqquitement">
+          <img  class="img" src="img/boat.webp" role="img" alt="aqquitement" tabindex="0" aria-label="aqquitement">
+          <img  class="img" src="img/boat.webp" role="img" alt="aqquitement" tabindex="0" aria-label="aqquitement">
+          <img  class="img" src="img/boat.webp" role="img" alt="aqquitement" tabindex="0" aria-label="aqquitement">
+          <img  class="img" src="img/boat.webp" role="img" alt="aqquitement" tabindex="0" aria-label="aqquitement">
         </div>
         </div>
       </div>
@@ -217,7 +225,7 @@
 
 
 <div>
-<div class="upload__group">
+<div class="upload__group" role="input" tabindex="0">
     <button class="button">Modifier les justificatifs</button>
     <input type="file" name="myfile" />
   </div>
@@ -232,6 +240,11 @@
 </main>
 
 
-    <script src="main.js"></script>
+<script src="js/common.js"></script>
+    <script src="js/nav.js" defer></script>
+    <script src="js/checkBoxs.js" defer></script>
+    <script src="js/radionBtns.js" defer></script>
+    <script src="js/fileUpload.js" defer></script>
+    <script src="js/langMenu.js" defer></script>
   </body>
 </html>

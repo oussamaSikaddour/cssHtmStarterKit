@@ -34,6 +34,16 @@
     &.open{
       display: flex;
     }
+
+    
+    ::-webkit-scrollbar-thumb {
+      background-color: g.$clr-danger-dark; /* Set the color of the scrollbar thumb */
+      border-radius: var(--br); /* Set the rounded corners of the scrollbar thumb */
+    }
+    
+    ::-webkit-scrollbar-track {
+      background-color:g.$clr-danger-light; /* Set the color of the scrollbar track */
+    }
   }
 
 &__closer{
