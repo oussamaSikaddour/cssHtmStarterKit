@@ -15,7 +15,7 @@
   display: flex;
   padding: 0 1rem;
   justify-content: space-between;
-  box-shadow: 0rem 0.5rem 0.5rem -0.3rem rgba(0,0,0,0.75);
+  box-shadow: 0rem 0.3rem 0.3rem -0.3rem rgba(0,0,0,0.75);
   align-items: center;
   background-color: var(--clr-light);
   &__logo{
@@ -293,7 +293,6 @@
       gap:0;
       width: 26.5rem;
       border-radius: 1rem;
-      box-shadow:0rem 0.5rem 0.5rem -0.3rem rgba(0,0,0,0.75);
       &--sub {
         position: unset;
         background-color: var(--clr-bg-light);
@@ -314,10 +313,6 @@
           align-items: center;
           &:last-child, &:first-child {
           border-radius: unset;
-
-          &:last-child{
-            border-bottom-left-radius: 1rem;
-          }
           }
           &:hover {
             background-color:var(--clr-bg);
@@ -360,6 +355,9 @@
       }
       &:last-of-type {
         border-bottom-left-radius: 1rem;
+        & li:last-of-type{
+          border-bottom-left-radius: 1rem;
+        }
       }
     }
     .nav__link {

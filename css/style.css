@@ -977,7 +977,7 @@ input[type=radio]:checked:disabled + label:before {
   display: flex;
   padding: 0 1rem;
   justify-content: space-between;
-  box-shadow: 0rem 0.5rem 0.5rem -0.3rem rgba(0, 0, 0, 0.75);
+  box-shadow: 0rem 0.3rem 0.3rem -0.3rem rgba(0, 0, 0, 0.75);
   align-items: center;
   background-color: var(--clr-light);
 }
@@ -1243,7 +1243,6 @@ input[type=radio]:checked:disabled + label:before {
   gap: 0;
   width: 26.5rem;
   border-radius: 1rem;
-  box-shadow: 0rem 0.5rem 0.5rem -0.3rem rgba(0, 0, 0, 0.75);
 }
 .nav--phone .nav__items--sub {
   position: unset;
@@ -1267,9 +1266,6 @@ input[type=radio]:checked:disabled + label:before {
 }
 .nav--phone .nav__items--sub > li:last-child, .nav--phone .nav__items--sub > li:first-child {
   border-radius: unset;
-}
-.nav--phone .nav__items--sub > li:last-child:last-child, .nav--phone .nav__items--sub > li:first-child:last-child {
-  border-bottom-left-radius: 1rem;
 }
 .nav--phone .nav__items--sub > li:hover {
   background-color: var(--clr-bg);
@@ -1308,6 +1304,9 @@ input[type=radio]:checked:disabled + label:before {
   border-top-left-radius: 1rem;
 }
 .nav--phone .nav__item:last-of-type {
+  border-bottom-left-radius: 1rem;
+}
+.nav--phone .nav__item:last-of-type li:last-of-type {
   border-bottom-left-radius: 1rem;
 }
 .nav--phone .nav__link {
