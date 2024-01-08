@@ -117,6 +117,10 @@ html.arabic{
       &:nth-of-type(1){
      margin-right: unset;
      margin-left: auto;
+     .nav__items--sub{
+      right: 0;
+      left: unset;
+     }
       }
       &--sub {
 

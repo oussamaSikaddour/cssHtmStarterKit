@@ -10,15 +10,15 @@ const handleKeyEvents = (event, index, keyFunctionHandler = null, htmlElementsAr
 
   switch (key) {
     case 'Escape':
-      event.preventDefault();
       if (escapeFunction) {
+        event.preventDefault();
         escapeFunction();
       }
       break;
     case 'Enter':
     case ' ':
-      event.preventDefault();
       if (keyFunctionHandler) {
+        event.preventDefault();
         keyFunctionHandler(index);
       }
       break;

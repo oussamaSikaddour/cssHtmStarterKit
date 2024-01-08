@@ -5,14 +5,12 @@
   top: 0;
   z-index: 5;
  display: none;
-
   @include u.breakpoint(md) {
     display: block;
   }
 
 }
 .nav {
-  width: 100%;
   height: 5.6rem;
   display: flex;
   padding: 0 1rem;
@@ -54,6 +52,11 @@
     gap: 1rem;
     &:nth-of-type(1){
    margin-right: auto;
+    
+   .nav__items--sub{
+    right: unset;
+    left: 0;
+   }
     }
     &--sub {
       position: absolute;
@@ -108,6 +111,7 @@
     position: relative;
     height: 5rem;
     display: flex;
+    // min-width: fit-content;
     align-items: center;
     gap: 2rem;
     border-radius: var(--br);
@@ -218,7 +222,6 @@
     right: 1rem;
     width: 4rem;
     height: 4rem;
-    outline:transparent;
     border-radius: 50%;
     z-index:8;
     align-self: flex-end;
@@ -311,6 +314,10 @@
           align-items: center;
           &:last-child, &:first-child {
           border-radius: unset;
+
+          &:last-child{
+            border-bottom-left-radius: 1rem;
+          }
           }
           &:hover {
             background-color:var(--clr-bg);

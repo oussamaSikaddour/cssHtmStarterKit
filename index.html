@@ -24,53 +24,78 @@
       </h2>
       <ol class="nav__items">
 
-        <li class="nav__item"  role="none" >
-          <a class="nav__link" href="accordion.html" aria-current="page"  tabindex="0" role="menuitem" >
-              Accordion
-          </a>
+       <li class="nav__item" role="none">
+          <div 
+          tabindex="0"
+          id="menuForms-btn" 
+          class="nav__btn nav__btn--dropdown"
+          role="menuitem"
+          aria-haspopup="true"
+           aria-expanded="false" 
+           aria-controls="formsItems" 
+           aria-label="Examples and usage guidelines for The forms" 
+           aria-labelledby="menuForms-btn">
+              Forms <i class="fa-solid fa-list"></i>
+          </div>
+          <ul role="menu" id="formsItems" class="nav__items--sub" hidden>
+            <li role="none">
+                <a href="form.html" tabindex="0" role="menuitem">Simple Form</a>
+            </li>
+            <li role="none">
+                <a href="fromsSlider.html" tabindex="0" role="menuitem">multi step Forms</a>
+            </li>
+          </ul>
       </li>
-
-      <li class="nav__item" role="none">
-        <a class="nav__link" href="footer.html" aria-current="page" tabindex="0" role="menuitem">
-          Footer
-        </a>
+   
+        <li class="nav__item" role="none">
+          <div 
+          tabindex="0"
+          id="components-btn" 
+          class="nav__btn nav__btn--dropdown"
+          role="menuitem"
+          aria-haspopup="true"
+           aria-expanded="false" 
+           aria-controls="subcompoentsItems" 
+           aria-label="Examples and usage guidelines for The html components" 
+           aria-labelledby="components-btn">
+            Components <i class="fa-solid fa-gears"></i>
+          </div>
+          <ul role="menu" id="subcompoentsItems" class="nav__items--sub" hidden>
+            <li role="none">
+              <a href="nav.html" tabindex="0" role="menuitem">Header & NavBar</a>
+           </li>
+            <li role="none">
+              <a href="footer.html" tabindex="0" role="menuitem">Footer & Lang Menu</a>
+           </li>
+            <li role="none">
+              <a href="accordion.html" tabindex="0" role="menuitem">Accordion</a>
+           </li>
+            <li role="none">
+              <a href="nav.html" tabindex="0" role="menuitem">Header</a>
+           </li>
+            <li role="none">
+              <a href="modal.html" tabindex="0" role="menuitem">Modal</a>
+           </li>
+            <li role="none">
+              <a href="table.html" tabindex="0" role="menuitem">Table</a>
+           </li>
+            <li role="none">
+              <a href="tabs.html" tabindex="0" role="menuitem">Tabs</a>
+           </li>
+            <li role="none">
+              <a href="ToastAndErrorsAndBox.html" tabindex="0" role="menuitem">Errors,Toast,And Dialog</a>
+          </li>
+            <li role="none">
+                <a href="chatBox.html" tabindex="0" role="menuitem">Chat Box</a>
+            </li>
+            <li role="none">
+              <a href="socials.html" tabindex="0" role="menuitem">socials</a>
+           </li>
+    
+      
+          
+          </ul>
       </li>
-      <li class="nav__item" role="none">
-        <a class="nav__link" href="form.html" aria-current="page" tabindex="0" role="menuitem">
-          Form
-        </a>
-      </li>
-     <li class="nav__item" role="none">
-        <a class="nav__link" href="fromsSlider.html" aria-current="page" tabindex="0" role="menuitem">
-          Form with Steps
-        </a>
-      </li>
-     <li class="nav__item" role="none">
-        <a class="nav__link" href="modal.html" aria-current="page" tabindex="0" role="menuitem">
-          Modal
-        </a>
-      </li>
-       <li class="nav__item" role="none">
-            <a class="nav__link" href="nav.html" aria-current="page" tabindex="0" role="menuitem">
-                Navigation
-            </a>
-        </li>
-       <li class="nav__item" role="none">
-          <a class="nav__link" href="socials.html" aria-current="page" tabindex="0" role="menuitem">socials</a>
-        </li>
-       <li class="nav__item" role="none">
-          <a class="nav__link" href="table.html" aria-current="page" tabindex="0" role="menuitem">table</a>
-        </li>
-       <li class="nav__item" role="none">
-          <a class="nav__link" href="tabs.html" aria-current="page" tabindex="0" role="menuitem">tabs</a>
-        </li>
-       <li class="nav__item" role="none">
-          <a class="nav__link" href="ToastAndErrorsAndBox.html" aria-current="page" tabindex="0" role="menuitem">Error Toast Box</a>
-        </li>
-       <li class="nav__item" role="none">
-          <a class="nav__link" href="chatBox.html" aria-current="page" tabindex="0" role="menuitem">Chat Box</a>
-        </li>
-
 
     </ol>
 
@@ -78,7 +103,13 @@
 </header>
 
 
-<button id="showPhoneNav-btn" class="button nav__humb" aria-expanded="false" aria-controls="options" aria-label="Show phone navigation" aria-labelledby="showPhoneNav-btn">
+<button 
+id="showPhoneNav-btn" 
+class="button nav__humb" 
+aria-expanded="false" 
+aria-controls="options" 
+aria-label="Show phone navigation"
+ aria-labelledby="showPhoneNav-btn">
     <span></span>
     <span></span>
   </button>
@@ -90,47 +121,78 @@
   </h2>
 
     <ul class="nav__items" id="options" hidden>
-     <li class="nav__item" role="none">
-        <a class="nav__link" href="accordion.html" aria-current="page" tabindex="0" role="menuitem">Accordion</a>
-      </li>
-     <li class="nav__item" role="none">
-        <a class="nav__link" href="footer.html" aria-current="page" tabindex="0" role="menuitem">
-          Footer
-        </a>
-      </li>
-     <li class="nav__item" role="none">
-        <a class="nav__link" href="form.html" aria-current="page" tabindex="0" role="menuitem">
-          Form
-        </a>
-      </li>
-     <li class="nav__item" role="none">
-        <a class="nav__link" href="fromsSlider.html" aria-current="page" tabindex="0" role="menuitem">
-          Form with Steps
-        </a>
-      </li>
-     <li class="nav__item" role="none">
-        <a class="nav__link" href="modal.html" aria-current="page" tabindex="0" role="menuitem">
-          Modal
-        </a>
-      </li>
-     <li class="nav__item" role="none">
-        <a class="nav__link" href="nav.html" aria-current="page" tabindex="0" role="menuitem">Navigation</a>
-      </li>
-     <li class="nav__item" role="none">
-        <a class="nav__link" href="socials.html" aria-current="page" tabindex="0" role="menuitem">socials</a>
-      </li>
-     <li class="nav__item" role="none">
-        <a class="nav__link" href="table.html" aria-current="page" tabindex="0" role="menuitem">table</a>
-      </li>
-     <li class="nav__item" role="none">
-        <a class="nav__link" href="tabs.html" aria-current="page" tabindex="0" role="menuitem">tabs</a>
-      </li>
-     <li class="nav__item" role="none">
-        <a class="nav__link" href="ToastAndErrorsAndBox.html" aria-current="page" tabindex="0" role="menuitem">Error Toast Box</a>
-      </li>
-     <li class="nav__item" role="none">
-        <a class="nav__link" href="chatBox.html" aria-current="page" tabindex="0" role="menuitem">Chat Box</a>
-      </li>
+
+      <li class="nav__item nav__item--dropDown" role="none">
+        <div 
+        tabindex="0"
+        id="menuForms-btn" 
+        class="nav__btn nav__btn--dropdown"
+        role="menuitem"
+        aria-haspopup="true"
+         aria-expanded="false" 
+         aria-controls="formsItems" 
+         aria-label="Examples and usage guidelines for The forms" 
+         aria-labelledby="menuForms-btn">
+            Forms <i class="fa-solid fa-list"></i>
+        </div>
+        <ul role="menu" id="formsItems" class="nav__items--sub" hidden>
+          <li role="none">
+              <a href="form.html" tabindex="0" role="menuitem">Simple Form</a>
+          </li>
+          <li role="none">
+              <a href="fromsSlider.html" tabindex="0" role="menuitem">multi step Forms</a>
+          </li>
+        </ul>
+    </li>
+ 
+      <li class="nav__item nav__item--dropDown" role="none">
+        <div 
+        tabindex="0"
+        id="components-btn" 
+        class="nav__btn nav__btn--dropdown"
+        role="menuitem"
+        aria-haspopup="true"
+         aria-expanded="false" 
+         aria-controls="subcompoentsItems" 
+         aria-label="Examples and usage guidelines for The html components" 
+         aria-labelledby="components-btn">
+          Components <i class="fa-solid fa-gears"></i>
+        </div>
+        <ul role="menu" id="subcompoentsItems" class="nav__items--sub" hidden>
+          <li role="none">
+            <a href="nav.html" tabindex="0" role="menuitem">Header & NavBar</a>
+         </li>
+          <li role="none">
+            <a href="footer.html" tabindex="0" role="menuitem">Footer & Lang Menu</a>
+         </li>
+          <li role="none">
+            <a href="accordion.html" tabindex="0" role="menuitem">Accordion</a>
+         </li>
+          <li role="none">
+            <a href="nav.html" tabindex="0" role="menuitem">Header</a>
+         </li>
+          <li role="none">
+            <a href="modal.html" tabindex="0" role="menuitem">Modal</a>
+         </li>
+          <li role="none">
+            <a href="table.html" tabindex="0" role="menuitem">Table</a>
+         </li>
+          <li role="none">
+            <a href="tabs.html" tabindex="0" role="menuitem">Tabs</a>
+         </li>
+          <li role="none">
+            <a href="ToastAndErrorsAndBox.html" tabindex="0" role="menuitem">Errors,Toast,And Dialog</a>
+        </li>
+          <li role="none">
+              <a href="chatBox.html" tabindex="0" role="menuitem">Chat Box</a>
+          </li>
+          <li role="none">
+            <a href="socials.html" tabindex="0" role="menuitem">socials</a>
+         </li>
+  
+        </ul>
+    </li>
+
     </ul>
 </nav> 
 

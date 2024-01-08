@@ -6,11 +6,7 @@ const navButtons = Array.from(document.querySelectorAll(".nav__btn--dropdown"));
 const dropDownMenus = document.querySelectorAll(".nav--phone .nav__item--dropDown")
 const toggleSubMenuPhoneInert = (dropDownMenu) => {
   const menuItems= dropDownMenu.querySelector(".nav__items--sub")
-  if (dropDownMenu?.classList.contains("clicked")) {
-    menuItems.removeAttribute('inert'); // Remove 'inert' attribute
-  } else {
-    menuItems.setAttribute('inert', true); // Add 'inert' attribute
-  }
+  toggleInertForChildElement(dropDownMenu,menuItems,"clicked")
 }
 
   HumBtn?.addEventListener('click', () => {
