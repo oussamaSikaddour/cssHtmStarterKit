@@ -1,0 +1,19 @@
+@use "../util/" as u;
+@use "../globals/" as g;
+
+.toolTip{
+position: absolute;
+top:-3rem;
+right: 0;
+display: none;
+align-items: center;
+justify-content: center;
+z-index: 2;
+padding: 0.5rem 1rem;
+background-color:rgba(g.$clr-font,0.8);
+color: var(--clr-light);
+border-radius:40rem;
+&.show{
+    display: flex;
+}
+}

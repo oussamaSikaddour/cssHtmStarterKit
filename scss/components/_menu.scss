@@ -7,7 +7,7 @@
   left: 0;
   width: 27rem;
   background-color: var(--clr-light);
-  z-index: 6;
+  z-index: 5;
   height: calc(100vh - 5.6rem);
   border: 0.2rem solid var(--clr-bg);
   border-left: 0;
@@ -63,7 +63,7 @@
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  z-index:8; 
+  z-index:5; 
   margin-left: 1rem;
   background-color: var(--clr-light);
   cursor: pointer;

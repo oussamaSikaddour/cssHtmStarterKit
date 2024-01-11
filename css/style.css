@@ -384,6 +384,7 @@ html.arabic .footer > p {
 
 /* Override the user agent stylesheet for button:focus-visible */
 .button {
+  position: relative;
   display: inline-flex;
   cursor: pointer;
   gap: 1rem;
@@ -895,7 +896,7 @@ svg {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  z-index: 3;
+  z-index: 5;
 }
 .footer > p {
   margin-left: auto;
@@ -1169,7 +1170,7 @@ input[type=radio]:checked:disabled + label:before {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  z-index: 8;
+  z-index: 5;
   align-self: flex-end;
   margin-right: 1rem;
   background-color: var(--clr-light);
@@ -1219,7 +1220,7 @@ input[type=radio]:checked:disabled + label:before {
   width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  z-index: 15;
+  z-index: 5;
   background-color: transparent;
   display: flex;
   gap: 1rem;
@@ -1640,7 +1641,7 @@ table th > div {
   left: 0;
   width: 27rem;
   background-color: var(--clr-light);
-  z-index: 6;
+  z-index: 5;
   height: calc(100vh - 5.6rem);
   border: 0.2rem solid var(--clr-bg);
   border-left: 0;
@@ -1692,7 +1693,7 @@ table th > div {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  z-index: 8;
+  z-index: 5;
   margin-left: 1rem;
   background-color: var(--clr-light);
   cursor: pointer;
@@ -1741,7 +1742,7 @@ table th > div {
   font-family: var(--ff);
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 20; /* Sit on top */
+  z-index: 25; /* Sit on top */
   margin: auto;
   background-color: #9c1919;
   border: 0.2rem solid #9c1919;
@@ -1793,7 +1794,7 @@ table th > div {
   position: fixed;
   bottom: 10rem;
   right: 1rem;
-  z-index: 100;
+  z-index: 25;
   max-width: 27rem;
   transform: scale(1);
   background-color: #17843f;
@@ -1899,7 +1900,7 @@ table th > div {
   font-family: var(--ff);
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 20; /* Sit on top */
+  z-index: 25; /* Sit on top */
   background-color: var(--clr-light);
   border: 0.2rem solid #DADCE0;
   min-width: 27rem;
@@ -1995,6 +1996,23 @@ table th > div {
 .lang__menu__item:hover:last-of-type {
   border-bottom-right-radius: var(--br);
   border-bottom-left-radius: var(--br);
+}
+
+.toolTip {
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  padding: 0.5rem 1rem;
+  background-color: rgba(5, 5, 5, 0.8);
+  color: var(--clr-light);
+  border-radius: 40rem;
+}
+.toolTip.show {
+  display: flex;
 }
 
 .chatBox {
