@@ -6,7 +6,7 @@ const navButtons = Array.from(document.querySelectorAll(".nav__btn--dropdown"));
 const dropDownMenus = document.querySelectorAll(".nav--phone .nav__item--dropDown")
 const toggleSubMenuPhoneInert = (dropDownMenu) => {
   const menuItems= dropDownMenu.querySelector(".nav__items--sub")
-  toggleInertForChildElement(dropDownMenu,menuItems,"clicked")
+  toggleInertForChildElement(dropDownMenu,menuItems,"clicked",true)
 }
 
   HumBtn?.addEventListener('click', () => {

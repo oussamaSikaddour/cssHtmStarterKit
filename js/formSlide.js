@@ -9,7 +9,7 @@ if (slideFormBtn) {
   slideFormBtn.addEventListener('click', (e) => {
     e.preventDefault();
     forms.classList.toggle('slide');
-    toggleInertForChildElement(forms,form2,"slide");
+    toggleInertForChildElement(forms,form2,"slide",true);
   });
 }
-toggleInertForChildElement(forms,form2,"slide");
+toggleInertForChildElement(forms,form2,"slide",true);

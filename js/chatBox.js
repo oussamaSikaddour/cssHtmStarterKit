@@ -19,7 +19,7 @@ const toggleChatBox = (show) => {
     openChatBox.focus();
   }
 
-toggleInert(chatBox, "show");
+toggleInertWhenState(chatBox, "show");
 };
 
 openChatBox?.addEventListener("click", () => {
@@ -31,4 +31,4 @@ closeChatBox?.addEventListener("click", () => {
   toggleChatBox(false);
   // Other actions related to closing the chat box
 });
-toggleInert(chatBox, "show");
+toggleInertWhenState(chatBox, "show");

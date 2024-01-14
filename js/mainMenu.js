@@ -19,7 +19,7 @@ const toggleMenuVisibility = (btn) => {
   menu.classList.toggle("open");
   btn.classList.toggle("clicked");
   IfMenuIsVisible(btn);
-  toggleInert(menu, "open");
+  toggleInertWhenState(menu, "open",true);
 };
 
 const quiteMainMenu = (index) => {
@@ -54,5 +54,5 @@ mainMenuBtns?.forEach((btn ,index) => {
 
 
 
-toggleInert(menu, "open"); // Set initial state of menu inertness
+toggleInertWhenState(menu,"open",true); // Set initial state of menu inertness
 

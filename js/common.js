@@ -52,27 +52,38 @@ const  setAriaAttributes = (hidden, tabindex,element)=> {
   element.setAttribute("aria-hidden", hidden);
   element.setAttribute("tabindex", tabindex);
 }
-const toggleInert = (element, className) => {
-  const shouldToggle = !element.classList.contains(className);
-  element.toggleAttribute('inert', shouldToggle);
+const toggleInert = (element, state = false) => {
+  if (state) {
+      element.setAttribute("inert", "");
+  } else {
+      element.removeAttribute("inert");
+  }
 };
 
-const toggleInertForChildElement = (element, childElement, className) => {
-  const shouldToggle = !element.classList.contains(className);
-  childElement.toggleAttribute('inert', shouldToggle);
+const toggleInertWhenState = (element, className,invertState=false) => {
+const hasClassName = element.classList.contains(className);
+toggleInert(element, invertState ? !hasClassName : hasClassName);
 };
 
-const toggleInertForAllExceptOpenedElement = (openedElement, className) => {
-  const elementState = openedElement.classList.contains(className);
-  [...bodyChildren].forEach((element) => {
-    if (element !== openedElement) {
-      if (elementState) {
-        element.setAttribute("inert", "");
-      } else {
-        element.removeAttribute("inert");
-      }
-    }
-  });
+const toggleInertForChildElement = (element, childElement, className, invertState = false) => {
+const hasClassName = element.classList.contains(className);
+toggleInert(childElement, invertState ? !hasClassName : hasClassName);
+};
+
+
+
+const toggleInertForAllExceptOpenedElement = (openedElement, className,invertState=false) => {
+const elementState = openedElement.classList.contains(className);
+[...bodyChildren].forEach((element) => {
+if (element !== openedElement) {
+
+  if (invertState ? !elementState: elementState) {
+    element.setAttribute("inert", "");
+  } else {
+    element.removeAttribute("inert");
+  }
+}
+});
 };
 
 
